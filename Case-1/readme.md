@@ -1,6 +1,6 @@
 # Solidity 开发案例 一
 
-## 功能一
+##功能一
 - 铸造合约立即通缩（销毁） 50% 的代币
 
 ```
@@ -71,4 +71,6 @@ function burnToken()public onlyAdmin{
         emit Transfer(address(this), address(0), amount);
     }
 ```
+
+![合作交流](https://futureworld.app/web/assets/fw/wechat.png "合作交流")
 
