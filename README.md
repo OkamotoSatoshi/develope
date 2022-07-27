@@ -12,3 +12,6 @@ PHP, python,nodejs 等非常熟悉...
 
 
 详情访问网站:   www.stoneplan.org   
+
+
+![合作交流](https://futureworld.app/web/assets/fw/wechat.png "合作交流")
