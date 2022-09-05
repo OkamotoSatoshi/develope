@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Dapp of STONE PLANE</title>
+        <meta content="DAO Dashboard" name="description" />
+        <meta content="STONE TEAM" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="nofollow">
+        <link rel="icon" href="assets/images/favicon.png" sizes="16x16">
+        <meta network="main" chain="BSC"> 
+
+        <!-- jvectormap -->
+        
+        <link href="assets/plugins/alertify/css/alertify.css" rel="stylesheet" type="text/css">
+        <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/extra.css" rel="stylesheet" type="text/css">
+        <link href="assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+                    <i class="ion-close"></i>
+                </button>
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <!--<a href="index.html" class="logo"><i class="mdi mdi-assistant"></i>Zoter</a>-->
+                        <a href="https://www.stoneplan.org" class="logo">
+                            <img src="assets/images/logo-lg.png" alt="" class="logo-large">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sidebar-inner niceScrollleft">
+
+                    <div id="sidebar-menu">
+                        <ul>
+
+                            <li class="menu-title">Web3 Application</li>
+
+                            <li>
+                                <a href="{:url('dapp/web3/all')}" class="waves-effect">
+                                    <i class="mdi mdi-bullseye"></i> <span> All</span>
+                                </a>
+                                <!-- <a href="#" class="waves-effect">
+                                    <i class="fab fa-hotjar"></i> <span> Hot </span>
+                                </a> -->
+                            </li>
+
+                            <li class="menu-title">Governance</li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-certificate"></i><span> Proposals (soon)</span><span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a onclick="notice('error','Upcoming, please follow the news on twitter')"  href="#1"> Launch</a></li>
+                                    <li><a onclick="notice('error','Upcoming, please follow the news on twitter')"   href="#2"> Overview</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="has_sub">
+                                <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-content-paste"></i><span> Article (soon)</span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                                <ul class="list-unstyled">
+                                    <li><a onclick="notice('error','Upcoming, please follow the news on twitter')"  href="#3">Write to Earn</a></li>
+                                    <li><a onclick="notice('error','Upcoming, please follow the news on twitter')"  href="#4">Overview</a></li>
+                                </ul>
+                            </li>
+
+
+                            <li class="menu-title">My Profile</li>
+                            <li menu-apply-nft>
+                                <a href="{:url('dapp/profile/mint')}" class="waves-effect">
+                                    <i class="mdi mdi-contact-mail"></i>
+                                    <span> Apply NFT <span class="badge badge-pill badge-primary float-right">1</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{:url('dapp/profile/info')}" class="waves-effect">
+                                    <i class="mdi mdi-account-key">
+                                    </i> <span> Infomation </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="menu-footer badge-primary">
+                        <div class="float-left font-16 mt-1 ml-2">
+                            <img src="assets/images/logo-128.png" alt="user" class="rounded-circle">
+                            <a>$ --</a> 
+                        </div>
+                        <div class="float-right text-center mr-3 icon-light">
+                            <a target="_blank" href="https://twitter.com/stone_web3"><i class="mdi mdi-twitter"></i></a>
+                            <a target="_blank" href="https://t.me/stone_web3"><i class="mdi mdi-telegram"></i></a>
+                            <a target="_blank" href="http://www.stoneplan.org"><i class="mdi mdi-web"></i></a>
+                            <a target="_blank" href="http://docs.stoneplan.org"><i class="fas fa-book"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- Start right Content here -->
+
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <!-- Top Bar Start -->
+                    <div class="topbar">
+
+                        <nav class="navbar-custom">
+
+                            <ul class="list-inline float-right mb-0">
+                                <!-- language-->
+                                
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect text-white" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="false" aria-expanded="false">
+                                        <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right language-switch">
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"/><span> Italian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"/><span> French </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"/><span> Spanish </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"/><span> Russian </span></a>
+                                    </div>
+                                </li>
+                                
+
+                                <li class="list-inline-item mr-4 text-lg" id="ConnectWallet">
+                                    <span class="badge badge-danger mt-1">Connect Wallet</span>
+                                </li>
+
+                            </ul>
+
+                            <ul class="list-inline menu-left mb-0">
+                                <li class="float-left">
+                                    <button class="button-menu-mobile open-left waves-light waves-effect">
+                                        <i class="mdi mdi-menu"></i>
+                                    </button>
+                                </li>                                
+                            </ul>
+
+                            <div class="clearfix"></div>
+
+                        </nav>
+
+                    </div>
+                    <!-- Top Bar End -->
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container-fluid">
+
+	                        <div class="row">
+	                            <div class="col-sm-12">
+	                                <div class="page-title-box">
+	                                    <div class="btn-group float-right">
+	                                        <ol class="breadcrumb p-0 m-0">
+	                                            <li class="breadcrumb-item"><a href="#">Token</a></li>
+	                                            <li class="breadcrumb-item active">批量转币</li>
+	                                        </ol>
+	                                    </div>
+	                                    <h4 class="page-title">批量转币</h4>
+	                                </div>
+	                            </div>
+	                            <div class="clearfix"></div>
+	                        </div>    
+	                        <div class="row grid-col">
+	                            <div class="row mx-auto col-lg-6 col-12 mt-5">
+	                            	<select select-chain class="form-control col-lg-2 col-12 mt-2">
+										<option value="NONE">请选择主链</option>
+										<option value="BSC-MAIN">BSC</option>
+										<option value="BSC-TEST">BSC 测试网</option>
+										<option value="FTM-MAIN">FTM</option>
+									</select>
+									<select select-model class="form-control col-lg-2 col-12 ml-lg-3 mt-2">
+										<option value="NONE">选择模式</option>
+										<option value="ETHER">转ETHER</option>
+										<option value="TOKEN">转Token</option>
+									</select>
+									<input class="col-lg-4 col-12 ml-lg-4 form-control mt-2" type="text" name="address" value="" placeholder="合约地址">
+									<input class="col-lg-2 col-12 ml-lg-3 form-control mt-2" type="text" name="amount" placeholder="每个数量">
+	                            </div>
+							</div>	
+							<div class="row grid-col">
+								<div class="mx-auto col-lg-6 col-12">
+	                            	<div class="p-0 mt-4">
+	                            		<p class="mb-0 text-secondary"><small>批量地址</small></p>
+		                                <div class="input-group">
+		                                    <textarea class="form-control" rows="8" aria-label="With textarea"></textarea>
+		                                </div>
+		                            </div>
+	                            </div>
+							</div>
+						
+							<p class="text-center text-danger mb-0 mt-4" notice="balance" value></p>	
+							<div class="row grid-col">
+								<div class="mx-auto col-lg-3 col-12">
+									<button class="btn btn-primary col-lg-12" submit-transfer>执行</button>	
+								</div>
+							</div>
+							
+						</div>
+
+	</body>
+
+	
+
+
+
+
+
+
+                        </div><!-- container -->
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    © 2022 STONE PLANE <a href="http://www.stoneplan.org" title="">WEB3 for DAO</a>
+                </footer>
+
+            </div>
+            <!-- End Right content here -->
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Web3 -->
+
+        <script src="js/web3.min.js"></script>
+        <script src="assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+        <script src="assets/js/web3modal.js"></script>
+        <script src="assets/js/provider.min.js"></script>
+        <script src="assets/js/contract.js?v={:time()}"></script>
+        <script src="assets/js/index.js?v={:time()}"></script>
+        
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/plugins/alertify/js/alertify.js"></script>
+        <!-- <script src="assets/pages/alertify-init.js"></script> -->
+        <script src="assets/js/app.js"></script>
+
+        
+		<script src="js/web3.min.js"></script>
+		<script src="commonJs/contract.js"></script>
+		<script src="commonJs/ABI.js"></script>
+		<script src="commonJs/common.js"></script>
+		<script src="commonJs/multiTransfer.js"></script>
+
+
+		<script>
+			//所有的js代码都写在这里面
+			$(function(){
+				const TranserContract = "0x877dd7728637dcff29301a6445215614d9c7823f";
+
+				
+
+				$("[name='address']").hide()
+				_getAccount();
+
+				//选择切换主网
+				$("[select-chain]").change(async function(){
+					let name = $(this).find("option:selected").val()
+					swithNetwork(name)
+					let address = await _getAccount() 
+					
+				})
+
+
+				//最终执行
+				
+				$("[submit-transfer]").click(async function(){
+					let chainName = $("[select-chain]").find("option:selected").val();
+					let model = $("[select-model]").find("option:selected").val();
+					let contract = $("[name='address']").val();
+					let amount = $("[name='amount']").val();
+					let dec ;
+					if(model == "TOKEN"){
+						dec = await decimals(contract);
+						amount = parseFloat(amount) * (10 ** parseInt(dec)) 
+					}else{
+						dec = 18;
+						amount = parseFloat(amount) * (10 ** parseInt(dec)) 
+					}
+
+					
+					let addresses = $("[name='addresses']").val();
+					let addrArr  = _getAddressFormat(addresses)
+					//判断输入的参数是否够
+					let needAmount = addrArr.length * parseFloat(amount) ;
+					let balance = parseFloat($("[notice='balance']").attr("value"))
+					balance = balance * (10**18)
+					let exeStatus = $("[submit-transfer]").attr("status");
+
+					if(exeStatus == 'not-approve'){  //执行授权
+						let max = _str16(11579208923731619542357098500868790785326998466564056403945758400791312963993);
+						approve(contract,TranserContract,max,window.address);
+						return
+					}
+
+
+					//判断模式
+					if(chainName=="NONE" || model=="NONE" || isNaN(amount) || addrArr.length == 0 ){
+						alert("请输入完整的参数") ;
+						return
+					}
+
+					if( balance < needAmount ){
+						alert("余额不足") ;
+						return
+					}
+
+					if(model == "TOKEN" ){
+						mulitTranfer("TOKEN",contract,addrArr,window.address,amount)
+					}
+
+					if(model == "ETHER"){
+						mulitTranfer("ETHER","",addrArr,window.address,amount)
+					}
+
+					
+
+
+				})
+
+				
+
+				//选择模式
+				$("[select-model]").change(async function(){
+					let v = $(this).find("option:selected").val();
+					if(v == "TOKEN") {   //选择转币
+						$("[name='address']").show(); 
+					}else{  //选择转eth
+						$("[name='address']").hide();
+						let balance = await getEthBalance(window.address) ;
+						$("[notice='balance']").text("余额："+ parseFloat(balance).toFixed(4)).attr("value",balance)
+					}
+				})
+
+				$('[name="address"]').change(async function(){
+					let res = $(this).val();
+					if(_verifyAddress(res)){
+						let balance = await getTokenBalance(res,window.address)
+						let approveNumber = await allowance(window.address,TranserContract,res)
+						if(parseInt(approveNumber) < 100000){
+							$("[submit-transfer]").text("授权转币").attr('status','not-approve')
+						}else{
+							$("[submit-transfer]").text("执行转币").attr('status','approve')
+						}
+						let token = await symbol(res);
+						$("[notice='balance']").text("余额："+balance + " "+ token).attr("value",balance)
+					}else{
+						alert("合约地址错误")
+					}
+				})
+
+				
+				
+
+			})
+		</script>
+
+</html>
+
+
+
