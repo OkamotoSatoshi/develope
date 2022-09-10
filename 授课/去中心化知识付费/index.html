@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Dapp of STONE PLANE</title>
+        <meta content="DAO Dashboard" name="description" />
+        <meta content="STONE TEAM" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="robots" content="nofollow">
+        <link rel="icon" href="assets/images/favicon.png" sizes="16x16">
+
+        <!-- jvectormap -->
+        
+        <link href="assets/plugins/alertify/css/alertify.css" rel="stylesheet" type="text/css">
+        <link href="assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/extra.css" rel="stylesheet" type="text/css">
+        <link href="assets/plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+                    <i class="ion-close"></i>
+                </button>
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <!--<a href="index.html" class="logo"><i class="mdi mdi-assistant"></i>Zoter</a>-->
+                        <a href="https://www.stoneplan.org" class="logo">
+                            <img src="assets/images/logo-lg.png" alt="" class="logo-large">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="sidebar-inner niceScrollleft">
+
+                    <div id="sidebar-menu">
+                        <ul>
+
+                            <li class="menu-title">Token Dapps</li>
+
+                            <li>
+                                <a href="{:url('dapp/web3/transfer')}" class="waves-effect">
+                                    <i class="mdi mdi-bullseye"></i> <span>Write to Earn</span>
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="menu-footer badge-primary">
+                        <div class="float-left font-16 mt-1 ml-2">
+                            <img src="assets/images/logo-128.png" alt="user" class="rounded-circle">
+                            <a>$ --</a> 
+                        </div>
+                        <div class="float-right text-center mr-3 icon-light">
+                            <a target="_blank" href="https://twitter.com/stone_web3"><i class="mdi mdi-twitter"></i></a>
+                            <a target="_blank" href="https://t.me/stone_web3"><i class="mdi mdi-telegram"></i></a>
+                            <a target="_blank" href="http://www.stoneplan.org"><i class="mdi mdi-web"></i></a>
+                            <a target="_blank" href="http://docs.stoneplan.org"><i class="fas fa-book"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- Start right Content here -->
+
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <!-- Top Bar Start -->
+                    <div class="topbar">
+
+                        <nav class="navbar-custom">
+
+                            <ul class="list-inline float-right mb-0">
+                                <!-- language-->
+                                
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect text-white" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="false" aria-expanded="false">
+                                        <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right language-switch">
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"/><span> Italian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"/><span> French </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"/><span> Spanish </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"/><span> Russian </span></a>
+                                    </div>
+                                </li>
+                                
+
+                                <li class="list-inline-item mr-4 text-lg" id="ConnectWallet">
+                                    <span class="badge badge-danger mt-1">Connect Wallet</span>
+                                </li>
+
+                            </ul>
+
+                            <ul class="list-inline menu-left mb-0">
+                                <li class="float-left">
+                                    <button class="button-menu-mobile open-left waves-light waves-effect">
+                                        <i class="mdi mdi-menu"></i>
+                                    </button>
+                                </li>                                
+                            </ul>
+
+                            <div class="clearfix"></div>
+
+                        </nav>
+
+                    </div>
+                    
+
+
+                    <!-- 内容写入此处 -->
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container-fluid">
+
+                            
+
+
+
+
+                        </div><!-- container -->
+
+                    </div><!-- END 内容写入此处 -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    © 2022 STONE PLANE <a href="http://www.stoneplan.org" title="">WEB3 for DAO</a>
+                </footer>
+
+            </div>
+            <!-- End Right content here -->
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Web3 -->
+
+        <script src="assets/js/web3.min.js"></script>
+        <script src="assets/plugins/sweet-alert2/sweetalert2.min.js"></script>
+        <script src="assets/js/web3modal.js"></script>
+        <script src="assets/js/provider.min.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/plugins/alertify/js/alertify.js"></script>
+        <!-- <script src="assets/pages/alertify-init.js"></script> -->
+        <script src="assets/js/app.js"></script>
+
+
+
+    </body>
+</html>
+
+
